@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.ArrayList;
+
 /**
  * Person App
  * Simple class to model a Person
@@ -17,6 +19,7 @@ public class App
         // Initialize it by passing argument values into the constructor
         // The reference "person1" is assigned a reference to the new Person object
         // (person1 points at the Person object) -
+
 
         Person person1 = new Person("Taylor Swift", "Reading, Pennsylvania", 25);
         //TODO Draw a diagram (on paper) to show te reference person1
@@ -50,6 +53,18 @@ public class App
         //TODO
         // Implement a toString( ) method in the Person class, and run this App again
         // to see how the toString() outputs the contents of the object properly.
+
+        System.out.println("Display person1 using printPerson() : \n" + person2.printPerson() );
+
+        System.out.println("Declare Arraylist of People");
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(person1);
+        people.add(person2);
+
+        for(Person p: people){
+            p.printPerson();
+        }
+
 
 
     }
